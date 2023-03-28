@@ -28,6 +28,11 @@ app.UseEndpoints(endpoints =>
 
 
     endpoints.MapControllerRoute(
+      name: "CSharp",
+      pattern: "{area:exists}/{controller=CSharpIronMan}/{action=ReturnWithClass}/{id?}");
+
+
+    endpoints.MapControllerRoute(
         name: "default",
         pattern: "{controller=Welcome}/{action=Index}/{id?}");
 });
