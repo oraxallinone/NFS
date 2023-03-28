@@ -31,6 +31,18 @@ app.UseEndpoints(endpoints =>
       name: "CSharp",
       pattern: "{area:exists}/{controller=CSharpIronMan}/{action=ReturnWithClass}/{id?}");
 
+    endpoints.MapControllerRoute(
+     name: "html",
+     pattern: "{area:exists}/{controller=HtmlWonderWoman}/{action=BillDemo}/{id?}");
+
+    endpoints.MapControllerRoute(
+     name: "jquery",
+     pattern: "{area:exists}/{controller=JqueryVission}/{action=JqueryWithCookies}/{id?}");
+
+    endpoints.MapControllerRoute(
+     name: "essix",
+     pattern: "{area:exists}/{controller=JavascriptElder}/{action=PracticeA}/{id?}");
+
 
     endpoints.MapControllerRoute(
         name: "default",

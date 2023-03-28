@@ -1,0 +1,65 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PracticeB</title>
+
+    <script type="text/javascript">
+
+        // //map function
+        // var arrOne = [1, 2, 3, 4, 5];
+        // var arrTwo = arrOne.map((item) => {
+        //     return item * 2;
+        // })
+        // console.log(arrTwo);
+
+
+
+
+        // //Exp2: iterate an array of objects and return only particular fields.
+        // var arrOne = [{ name: "satya kar", age: 29, department: "IT" }, 
+        // { name: "Orax demera", age: 21, department: "IT" }, 
+        // { name: "Cyndrela Omini", age: 25, department: "IT" }];
+
+        // var newArr = arrOne.map((data) => {
+        //     return {
+        //         name: data.name,
+        //         age: data.age,
+        //     }
+        // });
+        // console.log(newArr);
+
+
+
+
+        class PersonName {
+            constructor(fname, lname) {
+                this.fname = fname;
+                this.lname = lname;
+            }
+
+            fullname() {
+                return `result fullname ${this.fname}`
+            }
+        }
+        var john = new PersonName("satyabrata", "kar");
+        console.log(john);
+        console.log(john.fullname());
+
+
+
+
+
+
+    </script>
+
+</head>
+<body>
+</body>
+</html>

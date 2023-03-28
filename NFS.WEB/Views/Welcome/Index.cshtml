@@ -3,17 +3,28 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>first index</h1>
-<li>
-    <a asp-controller="Registration" asp-action="AddNew" asp-area="Employee">Employee</a>
-</li>
+<h1>First Index</h1>
+<li> <a asp-area="Employee" asp-controller="Registration" asp-action="AddNew">Employee</a> </li>
+<li> <a asp-area="Blogs" asp-controller="Bangalore" asp-action="KTM">Blogs</a> </li>
 
-<li>
-    <a asp-controller="Bangalore" asp-action="KTM" asp-area="Blogs">Blogs</a>
-</li>
-<li>
-    <a asp-controller="BootstrapHulk" asp-action="ModelPopup" asp-area="Bootstrap">Bootstrap</a>
-</li>
-<li>
-    <a asp-controller="CSharpIronMan" asp-action="ReturnWithClass" asp-area="CSharp">Return new class</a>
-</li>
+@*CSharp*@
+<li> <a asp-area="CSharp" asp-controller="CSharpIronMan" asp-action="ReturnWithClass">Return new class</a> </li>
+
+
+@*Jquery*@
+<li> <a asp-area="jquery" asp-controller="JqueryVission" asp-action="JqueryWithCookies">Jquery With Cookies</a> </li>
+
+
+@*Bootstrap*@
+<li> <a asp-area="Bootstrap" asp-controller="BootstrapHulk" asp-action="ModelPopup">Bootstrap</a> </li>
+<li> <a asp-area="Bootstrap" asp-controller="BootstrapHulk" asp-action="Accordion">Accordion not working</a> </li>
+<li> <a asp-area="Bootstrap" asp-controller="BootstrapHulk" asp-action="Card">Card</a> </li>
+
+
+@*jquery*@
+<li> <a asp-area="jquery" asp-controller="JqueryVission" asp-action="CalenderFormat">Calender format</a> </li>
+<li> <a asp-area="jquery" asp-controller="JqueryVission" asp-action="PressEnterKey">Press Enter Key</a> </li>
+
+@*javascript*@
+<li> <a asp-area="essix" asp-controller="JavascriptElder" asp-action="PracticeA">Practice A</a> </li>
+

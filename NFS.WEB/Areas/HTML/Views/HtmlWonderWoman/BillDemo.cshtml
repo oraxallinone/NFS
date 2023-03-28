@@ -1,0 +1,186 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>BillDemo</title>
+    <link href="~/css/html/BillDemo.css" rel="stylesheet" />
+    
+</head>
+<body>
+    <div>
+        <table class="table" border="1">
+            <tr class="bgLight">
+                <td colspan="10" class="textCenter fontHeader">
+                    Tax Invoice
+                </td>
+            </tr>
+            <tr class="bgLight">
+                <td colspan="10" class="textCenter fontSubHeader">
+                    <span>M/S. ANNAPURNA SWEETS </span><br>
+                    <span>Duburi,&nbsp; Kalinganagar&nbsp;,&nbsp;Jajpur&nbsp;,&nbsp; Odisha-755026</span><br>
+                    <span>Mob-7873444133, &nbsp;&nbsp;Email- tasteavenue.d@gmail.com</span><br>
+                    <span>GSTIN- 21EQZPS3634F1ZF</span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6" class="fontSubHeader">
+                    <span>To </span><br>
+                    <span class="marginLeft">TATA STEEL FOUNDATION </span><br>
+                    <span class="marginLeft">Duburi, Kalinganagar, Jajpur, </span><br>
+                    <span class="marginLeft">Odisha, India.</span>
+
+                </td>
+                <td colspan="4" class="fontSubHeader textRight">
+                    <table width="100%" class="tableBorderColaps" border="1">
+                        <tr>
+                            <td>
+                                Invoice No: TI000143
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Invoice Date: 24.03.2022
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="10" class="textCenter">
+                    <!-- Lunch at here --> &nbsp;
+                </td>
+            </tr>
+            <tr class="fontMenuHeader textCenter">
+                <td style="width:6% ;text-align: center;"> Sl No </td>
+                <td style="width:36% ;"> Details </td>
+                <td style="width:9% ;"> HSN/SAC </td>
+                <td style="width:7% ;"> Qnty </td>
+                <td style="width:10% ;"> Rate </td>
+                <td style="width:10% ;"> Value </td>
+                <td style="width:10% ;"> GST Rate </td>
+                <td style="width:5% ;"> CGST </td>
+                <td style="width:5% ;"> SGST </td>
+                <td style="width:8% ;"> TOTAL </td>
+            </tr>
+            <tr class="fontMenuBody">
+                <td class="textCenter">10</td>
+                <td>Boiled Egg</td>
+                <td class="textCenter">996337</td>
+                <td class="textCenter">80</td>
+                <td class="textCenter">8.00</td>
+                <td class="textRight">640.00</td>
+                <td class="textCenter">18</td>
+                <td class="textRight">57.60</td>
+                <td class="textRight">57.60</td>
+                <td class="textRight">755.20</td>
+            </tr>
+            <tr class="fontMenuBody">
+                <td class="textCenter">99</td>
+                <td>Veg Sandwich </td>
+                <td class="textCenter">996337</td>
+                <td class="textCenter">80</td>
+                <td class="textCenter">8.00</td>
+                <td class="textRight">640.00</td>
+                <td class="textCenter">18</td>
+                <td class="textRight">57.60</td>
+                <td class="textRight">57.60</td>
+                <td class="textRight">755.20</td>
+            </tr>
+            <tr class="fontMenuBody">
+                <td class="textCenter">1</td>
+                <td>Packing Charges of Snacks Items </td>
+                <td class="textCenter">996337</td>
+                <td class="textCenter">80</td>
+                <td class="textCenter">8.00</td>
+                <td class="textRight">640.00</td>
+                <td class="textCenter">18</td>
+                <td class="textRight">57.60</td>
+                <td class="textRight">57.60</td>
+                <td class="textRight">755.20</td>
+            </tr>
+            <tr class="fontMenuBody">
+                <td class="textCenter">1</td>
+                <td>Cold Drink Glass (Paper)(100 nos) </td>
+                <td class="textCenter">996337</td>
+                <td class="textCenter">80</td>
+                <td class="textCenter">8.00</td>
+                <td class="textRight">640.00</td>
+                <td class="textCenter">18</td>
+                <td class="textRight">57.60</td>
+                <td class="textRight">57.60</td>
+                <td class="textRight">755.20</td>
+            </tr>
+            <tr class="fontMenuBody">
+                <td class="textCenter">87</td>
+                <td>Cold Drink Glass (Paper)(100 nos) with extra soda and lime jush</td>
+                <td class="textCenter">996337</td>
+                <td class="textCenter">80</td>
+                <td class="textCenter">8.00</td>
+                <td class="textRight">640.00</td>
+                <td class="textCenter">18</td>
+                <td class="textRight">57.60</td>
+                <td class="textRight">57.60</td>
+                <td class="textRight">755.20</td>
+            </tr>
+
+            <tr class="fontMenuHeader">
+                <td colspan="5" class="textCenter"> Total </td>
+                <td class="textRight"> 17222.99 </td>
+                <td> </td>
+                <td class="textRight"> 1286.66 </td>
+                <td class="textRight"> 1286.66 </td>
+                <td class="textRight"> 19796.30 </td>
+            </tr>
+            <tr class="textCenter">
+                <td colspan="2" class="fontMenuHeader">Bill summary</td>
+                <td class="fontMenuHeader">Value</td>
+                <td class="fontMenuHeader">GST</td>
+                <td colspan="6" rowspan="4"></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="textCenter">CGST@9%</td>
+                <td class="textRight">129000.00</td>
+                <td class="textRight">1166.00</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="textCenter">CGST@9%</td>
+                <td class="textRight">129000.00</td>
+                <td class="textRight">1166.00</td>
+            </tr>
+            <tr class="fontMenuHeader">
+                <td colspan="3" class="textCenter">Total Tax</td>
+                <td class="textRight">2544.512</td>
+            </tr>
+            <tr class="fontMenuHeader">
+                <td colspan="9" class="textCenter"> Grand Total Amount Rs. </td>
+                <td class="textRight"> 19796.30 </td>
+
+            </tr>
+            <tr>
+                <td colspan="10" class="textCenter">
+                    Rupees in words - (Ninteen Thousand Seven Hundred Ninty Six Only)
+                </td>
+            </tr>
+            <tr class="bgLight footerHeight textRight">
+                <td colspan="10">
+                    <div class="marginRight">
+                        For M/S. ANNAPURNA SWEETS
+                        <br> <br><br>
+                        Auttorised Signature
+                    </div>
+
+                    <br>
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
+</body>
+</html>

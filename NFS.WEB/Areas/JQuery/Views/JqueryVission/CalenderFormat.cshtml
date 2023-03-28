@@ -1,0 +1,66 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CalenderFormat</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"> </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+
+</head>
+<body>
+    <div class="container row my-2 mx-auto">
+        <input type="date" data-provide="datepicker"
+               name="date" id="date_val">
+        <button type="button" id="datebtn"
+                class="btn btn-primary row ml-2">
+            Primary
+        </button>
+    </div>
+
+    <div class=" w-25">
+        <ul class="list-group">
+            <li class="list-group-item ">
+                DD-MM-YYYY :
+                <span id="format1"
+                      class="text-primary"></span>
+            </li>
+            <li class="list-group-item ">
+                DD MMMM YYYY :
+                <span id="format2"
+                      class="text-primary"></span>
+            </li>
+            <li class="list-group-item ">
+                DD/MM/YYYY :
+                <span id="format3"
+                      class="text-primary"></span>
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+
+        $("#datebtn").click(function () {
+            var format1 = moment($("#date_val")
+                .val()).format('DD-MM-YYYY');
+
+            $("#format1").text(format1);
+
+            var format2 = moment($("#date_val")
+                .val()).format('DD MMMM YYYY');
+
+            $("#format2").text(format2);
+
+            var format3 = moment($("#date_val")
+                .val()).format('DD/MM/YYYY');
+
+            $("#format3").text(format3);
+        });
+    </script>
+</body>
+</html>

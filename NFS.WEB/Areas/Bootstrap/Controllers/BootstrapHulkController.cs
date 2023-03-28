@@ -9,5 +9,14 @@ namespace NFS.WEB.Areas.Bootstrap.Controllers
         {
             return View();
         }
+        public IActionResult Accordion()
+        {
+            return View();
+        }
+
+        public IActionResult Card()
+        {
+            return View();
+        }
     }
 }

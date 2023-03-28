@@ -1,4 +1,7 @@
 /*!
+ * <script src="~/lib/jquery/dist/jquery.js"></script>
+ * 
+ * 
  * jQuery JavaScript Library v3.5.1
  * https://jquery.com/
  *
