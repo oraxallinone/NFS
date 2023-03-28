@@ -12,10 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Blogs\Data\" />
-    <Folder Include="Areas\Blogs\Models\" />
-    <Folder Include="Areas\Employee\Data\" />
-    <Folder Include="Areas\Employee\Models\" />
+    <Folder Include="Areas\Bootstrap\Data\" />
+    <Folder Include="Areas\Bootstrap\Models\" />
   </ItemGroup>
 
 </Project>

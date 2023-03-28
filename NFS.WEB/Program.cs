@@ -23,13 +23,8 @@ app.UseAuthorization();
 app.UseEndpoints(endpoints => 
 {
     endpoints.MapControllerRoute(
-       name: "Blogs",
-       pattern: "{area:exists}/{controller=Bangalore}/{action=HSR}/{id?}");
-
-
-    endpoints.MapControllerRoute(
-       name: "Employee",
-       pattern: "{area:exists}/{controller=Registration}/{action=AddNew}/{id?}");
+      name: "Bootstrap",
+      pattern: "{area:exists}/{controller=BootstrapHulk}/{action=ModelPopup}/{id?}");
 
 
     endpoints.MapControllerRoute(
