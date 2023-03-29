@@ -9,5 +9,12 @@ namespace NFS.WEB.Controllers
             //return View("~/Areas/Blogs/Views/Home/Index.cshtml");
             return View();
         }
+
+        public IActionResult CarEMI()
+        {
+            return View();
+        }
+
+
     }
 }

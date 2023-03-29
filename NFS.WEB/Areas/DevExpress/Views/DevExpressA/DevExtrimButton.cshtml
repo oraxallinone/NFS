@@ -1,0 +1,59 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DevExtrimButton</title>
+
+    <!-- ... -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- DevExtreme theme -->
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/22.1.4/css/dx.light.css">
+
+    <!-- DevExtreme library -->
+    <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/22.1.4/js/dx.all.js"></script>
+    <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/22.1.4/js/dx.web.js"></script> -->
+    <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/22.1.4/js/dx.viz.js"></script> -->
+
+    <script type="text/javascript">
+        $(function () {
+            $("#buttonContainer").dxButton({
+                text: "Click me!",
+                onClick: function () {
+                    alert("Hello world!");
+                }
+            });
+        });
+
+
+    </script>
+</head>
+<body>
+    <div>
+        <table width="70%">
+            <tr>
+                <td width="33%">
+                    <div id="buttonContainer"></div>
+                </td>
+                <td width="33%">
+                    <div id="dataGridContainer"></div>
+                </td>
+                <td width="33%">
+                    <div id=""></div>
+                </td>
+
+            </tr>
+        </table>
+
+
+
+
+    </div>
+</body>
+</html>

@@ -43,6 +43,10 @@ app.UseEndpoints(endpoints =>
      name: "essix",
      pattern: "{area:exists}/{controller=JavascriptElder}/{action=PracticeA}/{id?}");
 
+    endpoints.MapControllerRoute(
+     name: "DevExpress",
+     pattern: "{area:exists}/{controller=DevExpressA}/{action=DataGrid}/{id?}");
+
 
     endpoints.MapControllerRoute(
         name: "default",

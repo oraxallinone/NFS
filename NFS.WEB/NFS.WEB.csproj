@@ -17,6 +17,8 @@
   <ItemGroup>
     <Folder Include="Areas\Bootstrap\Data\" />
     <Folder Include="Areas\Bootstrap\Models\" />
+    <Folder Include="Areas\DevExpress\Data\" />
+    <Folder Include="Areas\DevExpress\Models\" />
     <Folder Include="Areas\ESSix\Data\" />
     <Folder Include="Areas\ESSix\Models\" />
     <Folder Include="Areas\HTML\Data\" />

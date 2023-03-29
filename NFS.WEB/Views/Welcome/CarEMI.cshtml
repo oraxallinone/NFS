@@ -1,0 +1,130 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CarEMI</title>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+</head>
+<body>
+    <div>
+        <table>
+            @*<tr><td>x shouroom price</td> <td><input type="text" id="txtXshowroom" value="862900" /></td> </tr>
+            <tr><td>insurance</td> <td><input type="text" id="txtInsurance" value="30000" /></td> </tr>
+            <tr><td>BH Rto</td> <td><input type="text" id="txtRTO" value="30000" /></td> </tr>
+            <tr><td>fast card</td> <td><input type="text" id="txtFastcard" value="500" /></td> </tr>
+            <tr><td>overal</td> <td><input type="text" id="txtOveral" /></td> </tr>
+            <tr><td>down payment</td> <td><input type="text" id="txtDownpayment" /></td> </tr>*@
+
+            @*<tr><td>Ex showroom price</td> <td><input type="text" id="txtXshowroom" value="599900" /></td> </tr>
+            <tr><td>Insurance</td> <td><input type="text" id="txtInsurance" value="30000" /></td> </tr>
+            <tr><td>BH Rto</td> <td><input type="text" id="txtRTO" value="48000" /></td> </tr>
+            <tr><td>Fastag</td> <td><input type="text" id="txtFastcard" value="500" /></td> </tr>
+            <tr><td>Overal</td> <td><input type="text" id="txtOveral" /></td> </tr>
+            <tr><td>Down payment</td> <td><input type="text" id="txtDownpayment" /></td> </tr>*@
+
+            <tr><td>Ex showroom price</td> <td><input type="text" id="txtXshowroom" value="906900" /></td> </tr>
+            <tr><td>Insurance</td> <td><input type="text" id="txtInsurance" value="33000" /></td> </tr>
+            <tr><td>BH Rto</td> <td><input type="text" id="txtRTO" value="30000" /></td> </tr>
+            <tr><td>Fastag</td> <td><input type="text" id="txtFastcard" value="500" /></td> </tr>
+            <tr><td>Overal</td> <td><input type="text" id="txtOveral" /></td> </tr>
+            <tr><td>Down payment</td> <td><input type="text" id="txtDownpayment" /></td> </tr>
+
+            @*<tr><td>x shouroom price</td> <td><input type="text" id="txtXshowroom" /></td> </tr>
+            <tr><td>insurance</td> <td><input type="text" id="txtInsurance" value="42768" /></td> </tr>
+            <tr><td>BH Rto</td> <td><input type="text" id="txtRTO" value="13500" /></td> </tr>
+            <tr><td>fast card</td> <td><input type="text" id="txtFastcard" value="26708" /></td> </tr>
+            <tr><td>overal</td> <td><input type="text" id="txtOveral" /></td> </tr>
+            <tr><td>down payment</td> <td><input type="text" id="txtDownpayment" /></td> </tr>*@
+
+
+        </table>
+        <table>
+            <tr>
+                <td>Loan amount</td>
+                <td>Loan%</td>
+                <td>Year in Month</td>
+                <td>Extra pay for loan</td>
+
+                <td>Total loan amount</td>
+                <td>EMI</td>
+            </tr>
+            <tr>
+                <td><input type="text" id="txtAmt" value="650000" />  </td>
+                <td><input type="text" id="txtPer" value="9" /></td>
+                <td><input type="text" id="txtYear" value="60" /></td>
+                <td><input type="text" id="txtExtra" /></td>
+
+                <td><input type="text" id="txtTotal" /></td>
+                <td><input type="text" id="txtEmi" /></td>
+            </tr>
+        </table>
+        <button id="btnCalculate">caculate</button>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                $('#btnCalculate').click(function () {
+                    let xshowroomPrice = $('#txtXshowroom').val();
+                    let insurance = $('#txtInsurance').val();
+                    let rto = $('#txtRTO').val();
+                    let fastcard = $('#txtFastcard').val();
+                    let overal = parseFloat(xshowroomPrice) + parseFloat(insurance) + parseFloat(rto) + parseFloat(fastcard);
+                    $('#txtOveral').val(parseFloat(overal).toFixed(2));
+                    cacuCar();
+                    let lneAmt = $('#txtAmt').val();
+                    let preDownpay = parseFloat(overal) - parseFloat(lneAmt);
+                    $('#txtDownpayment').val(parseFloat(preDownpay).toFixed(2));
+
+                });
+
+                //$('#txtAmt').keyup(function () { cacuCar(); });
+                //$('#txtPer').keyup(function () { cacuCar(); });
+
+                function cacuCar() {
+                    debugger
+                    let input_p = $("#txtAmt").val();
+                    let p = parseFloat(input_p);
+
+                    let input_r = $("#txtPer").val();
+                    let r_s1 = parseFloat(input_r) / 12;
+                    let r_s2 = r_s1 / 100;
+                    let r = parseFloat(r_s2.toFixed(5));
+
+                    let input_n = $("#txtYear").val();//in month
+                    let n = parseFloat(input_n);
+
+                    //let input_n = $("#txtYear").val();//in year
+                    //let n = parseFloat(input_n) * 12;
+
+                    let p_s1 = r + 1;
+                    let power = parseFloat(Math.pow(p_s1, n).toFixed(5));
+
+                    let x_final = parseFloat((p * r * power).toFixed(5));
+                    let y_final = parseFloat(power - 1);
+
+                    let emi = parseFloat(x_final / y_final);
+                    $('#txtEmi').val(emi.toFixed());
+
+                    let totalPayAmount = parseFloat(emi * n);
+                    $('#txtTotal').val(totalPayAmount.toFixed());
+
+                    let extraPay = totalPayAmount - p;
+                    $('#txtExtra').val(extraPay.toFixed());
+
+                }
+
+
+
+
+
+            });
+        </script>
+    </div>
+</body>
+</html>
