@@ -18,5 +18,20 @@ namespace NFS.WEB.Areas.DevExpress.Controllers
         {
             return View();
         }
+        public IActionResult Accordion()
+        {
+            return View();
+        }
+
+        public IActionResult Autocomplete()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult SearchEmployeName( string userId)
+        {
+            return Json(userId);
+        }
     }
 }

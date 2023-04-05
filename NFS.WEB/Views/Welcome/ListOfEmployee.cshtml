@@ -1,0 +1,90 @@
+﻿@model IEnumerable<NFS.WEB.Models.Employee>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ListOfEmployee</title>
+    <style type="text/css">
+    .myTabla{
+        border:2px solid black;
+        width:100%;
+    }
+
+        thead{
+            background-color:darkblue;
+            color:white;
+        }
+        tbody{
+            background-color:darkcyan;
+            color:white
+        }
+    tr:hover{
+        border:1px solid red;
+        background-color:lightyellow;
+        color:black;
+    }
+    td{
+        text-align:center;
+    }
+    </style>
+</head>
+<body>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+    <table class="table myTabla">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpPhoneNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpDOB)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpPhoneNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpDOB)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>

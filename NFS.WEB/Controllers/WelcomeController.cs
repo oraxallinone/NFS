@@ -8,8 +8,6 @@ namespace NFS.WEB.Controllers
     {
         public IActionResult Index()
         {
-            var sss = SearchCustomers();
-
             //return View("~/Areas/Blogs/Views/Home/Index.cshtml");
             return View();
         }
@@ -19,6 +17,32 @@ namespace NFS.WEB.Controllers
             return View();
         }
 
+        public IActionResult ListOfEmployee()
+        {
+            return View(SearchCustomers());
+        }
+        [HttpGet]
+        public IActionResult DetailsOfEmployee(Employee emp)
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult EditOfEmployee(Employee emp)
+        {
+            return View();
+        }
+        [HttpPut]
+        public IActionResult UpdateOfEmployee(Employee emp)
+        {
+            return View();
+        }
+
+        [HttpDelete]
+        public IActionResult DeleteOfEmployee(Employee emp)
+        {
+            return View();
+        }
 
 
         private List<Employee>? SearchCustomers()
@@ -32,9 +56,17 @@ namespace NFS.WEB.Controllers
             {
                 emps = JsonConvert.DeserializeObject<List<Employee>>(response.Content.ReadAsStringAsync().Result);
             }
-
             return emps;
         }
+
+        public int Addition(int a,int b)
+        {
+             
+            return a +b ;
+        }
+
+
+
 
 
     }
