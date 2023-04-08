@@ -1,34 +1,81 @@
 ﻿@{
     Layout = null;
 }
-
 <!DOCTYPE html>
-
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>DropDown</title>
-
+    <meta charset="utf-8">
+    <title>Untitled</title>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/22.1.4/css/dx.light.css">
-    <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/22.1.4/js/dx.all.js"></script>
-
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/22.2.5/css/dx.light.css">
+    <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/22.2.5/js/dx.all.js"></script>
     <script type="text/javascript">
-        $("#ddl").kendoDropDownList({
-            dataTextField: "text",
-            dataValueField: "value",
-            dataSource: [
-                { text: "Item1", value: "1" },
-                { text: "Item2", value: "2" }
-            ]
+        $(document).ready(function () {
+
+            //$("#myDropDownButton").dxDropDownButton({
+            //    displayExpr: "name",
+            //    items: null,
+            //    width: "10%",
+            //    keyExpr: "id",
+            //    displayExpr: "empName",
+            //    useSelectMode: true,
+            //    selectedItemKey: 1,
+            //    onItemClick: function (e) {
+            //        console.log(e.itemData.empName);
+            //    }
+
+            //});
+
+
+
+            const actions = [
+                { id: 1, text: "My profile", icon: "user" },
+                { id: 2, text: "Messages", icon: "email" },
+                { id: 3, text: "Contacts", icon: "group" },
+                { id: 4, text: "Log out", icon: "runner1" }
+            ];
+            $.ajax({
+                url: '/DevExpress/DevExpressA/GetDepartments',
+                type: "GET",
+                dataType: "json",
+                success: function (data) {
+                    if (data) {
+                        $("#myDropDownButton").dxDropDownButton({
+                            //icon: 'save',
+                            text: 'Download Trial',
+                            items: data,
+                            width: "300px",
+                            //dropDownOptions: { width: 1230, },
+                            keyExpr: "id",
+                            displayExpr: "empName",
+                            useSelectMode: true,
+                            selectedItemKey: 1,
+                            onItemClick: function (e) {
+                                console.log(e.itemData.empName);
+                            }
+                        });
+                    }
+                }
+            });
+
+
+
+            //$("#myDropDownButton").dxDropDownButton({
+            //    items: actions,
+            //    keyExpr: "id",
+            //    displayExpr: "text",
+            //    useSelectMode: true,
+            //    selectedItemKey: 1
+            //});
         });
 
     </script>
 
+
 </head>
-<body>
-    <div class="text-center">
-        <input id="ddl" />
-    </div>
+<body class="dx-viewport">
+
+    <div id="myDropDownButton"></div>
+
 </body>
 </html>

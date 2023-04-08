@@ -8,4 +8,6 @@
         public int EmpPhoneNo { get; set; }
         public DateTime EmpDOB { get; set; }
     }
+     
+
 }

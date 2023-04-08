@@ -1,0 +1,76 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Button</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/22.2.5/css/dx.light.css">
+    <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/22.2.5/js/dx.all.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#button").dxButton({
+                text: "Click me!",
+                type: "success",
+                //stylingMode: "outlined",
+                icon: "comment",
+                onClick: function () {
+                    DevExpress.ui.notify("The button was clicked");
+                }
+            });
+            //-- btn end
+
+            function changeYear(date) {
+                const thisDate = new Date();
+                const thisYear = thisDate.getFullYear();
+                return new Date(date.setFullYear(thisYear));
+            };
+
+            $("#calendar").dxCalendar({
+                min: changeYear(new Date('2023-01-01T00:00:00.000Z')),
+                max: changeYear(new Date('2023-12-31T00:00:00.000Z')),
+                //disabledDates: function (data) {
+                //    return data.view === 'month' && data.date.getDay() === 0;
+                //},
+                showTodayButton: true,
+                showWeekNumbers: true,
+                weekNumberRule: "firstDay",
+            });
+            //-- calander
+
+            $("#check-box").dxCheckBox({
+                value: null,
+                enableThreeStateBehavior: true,
+                text: 'Approve',
+                hint: 'Approve',
+                iconSize: 25,
+                onValueChanged: function (e) {
+                    if (e.value) {
+                        DevExpress.ui.notify("The CheckBox is checked", "success", 500);
+                    }
+                },
+            });
+
+
+
+
+        });
+    </script>
+</head>
+<body>
+    <div id="button"></div>
+
+    <div id="calendar"></div>
+    <hr />
+
+    <div id="check-box"></div>
+
+
+
+
+</body>
+</html>

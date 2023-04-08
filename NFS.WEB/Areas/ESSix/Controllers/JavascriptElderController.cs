@@ -25,5 +25,9 @@ namespace NFS.WEB.Areas.ESSix.Controllers
         {
             return View();
         }
+        public IActionResult ArrowFunction()
+        {
+            return View();
+        }
     }
 }
