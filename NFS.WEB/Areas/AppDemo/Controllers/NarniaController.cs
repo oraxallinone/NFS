@@ -9,5 +9,18 @@ namespace NFS.WEB.Areas.AppDemo.Controllers
         {
             return View();
         }
+
+        public IActionResult Loby()
+        {
+            return View();
+        }
+        public IActionResult InputDemo()
+        {
+            return View();
+        }
+        public IActionResult DefaultPage()
+        {
+            return View();
+        }
     }
 }

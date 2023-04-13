@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "DefaultPage";
+    Layout = "~/Views/Shared/_AppDemoLayout.cshtml";
+}
+
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { id = "customerAddForm" }))
+{
+    <div class="content-wrapper">
+        <section class="content">
+            <div class="container-fluid">
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card card-info card-outline">
+                            <div class="card-header">
+                                <h3 class="card-title">Heading</h3>
+                            </div>
+                            <div>
+                                <div class="card-body">
+                                    <div class="row">
+
+                                        <div class="form-group col-md-3">
+                                            <label for="exampleInputEmail1">Customer Name</label>
+                                            <input type="text" placeholder="Customer Name" class="form-control form-control-sm" />
+                                        </div>
+                                        
+
+
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="submit" id="CustomerSubmit" class="btn  btn-sm  btn-info w104">Submit</button>
+                                    <a href="/Product/CustomerList" class="btn btn-sm   btn-outline-danger w104">Cancel</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+    </div>
+}
+
+
+
+
+
+
+
+
+
+
+
+

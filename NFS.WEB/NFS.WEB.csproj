@@ -28,6 +28,9 @@
     <Folder Include="Areas\JQuery\Data\" />
     <Folder Include="Areas\JQuery\Models\" />
     <Folder Include="wwwroot\js\essix\" />
+    <Folder Include="wwwroot\theme\img\" />
+    <Folder Include="wwwroot\theme\js\" />
+    <Folder Include="wwwroot\theme\css\" />
   </ItemGroup>
 	
 </Project>
