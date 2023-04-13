@@ -42,9 +42,9 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Id)
+                @Html.DisplayNameFor(model => model.EmployeeID)
             </th>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.EmpName)
             </th>
             <th>
@@ -56,11 +56,11 @@
             <th>
                 @Html.DisplayNameFor(model => model.EmpDOB)
             </th>
-            <th></th>
+            <th></th>*@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@*@foreach (var item in Model) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Id)
@@ -83,7 +83,7 @@
                 @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
             </td>
         </tr>
-}
+}*@
     </tbody>
 </table>
 </body>

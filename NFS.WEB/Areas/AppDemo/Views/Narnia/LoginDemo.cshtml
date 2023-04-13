@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "LoginDemo";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+
+
+<div class="wrapper">
+    <div class="logo">
+        @*<img src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-bird-symbols-png-logo-0.png" alt="">*@
+        <img src="~/img/logo7.png" />
+    </div>
+    <div class="text-center mt-4 name" style="color:var(--mc)">
+        Login
+    </div>
+    <form class="p-3 mt-3">
+        <div class="form-field d-flex align-items-center">
+            <span class="far fa-user"></span>
+            <input type="text" class="font-size-15" style="font-size: 15px;" name="userName" id="userName" placeholder="Username">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="fas fa-key"></span>
+            <input type="password" class="font-size-15" style="font-size: 15px;" name="password" id="pwd" placeholder="Password">
+        </div>
+        <button class="btn mt-3" style="background-color:var(--mc)">Login</button>
+    </form>
+    <div class="text-center fs-6" style="color:var(--mc)">
+        <a href="#" style="color:var(--mc)">Forget password?</a> or <a style="color:var(--mc)" href="#">Sign up</a>
+    </div>
+</div>

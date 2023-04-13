@@ -47,6 +47,10 @@ app.UseEndpoints(endpoints =>
      name: "DevExpress",
      pattern: "{area:exists}/{controller=DevExpressA}/{action=DataGrid}/{id?}");
 
+    endpoints.MapControllerRoute(
+     name: "App",
+     pattern: "{area:exists}/{controller=Narnia}/{action=LoginDemo}/{id?}");
+
 
     endpoints.MapControllerRoute(
         name: "default",

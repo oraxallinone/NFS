@@ -2,12 +2,24 @@
 {
     public class Employee
     {
-        public int Id { get; set; }
-        public string EmpName { get; set; }
-        public string EmpAddress { get; set; }
-        public int EmpPhoneNo { get; set; }
-        public DateTime EmpDOB { get; set; }
+        public int EmployeeID { get; set; }
+        public string FullName { get; set; }
+        public string Position { get; set; }
+        public int TitleOfCourtesy { get; set; }
+        public DateTime BirthDate { get; set; }
+        public DateTime HireDate { get; set; }
+        public string Address { get; set; }
+        public string City { get; set; }
+        public string Region { get; set; }
+        public int PostalCode { get; set; }
+        public string Country { get; set; }
+        public string HomePhone { get; set; }
+        public int Extension { get; set; }
+        public string Photo { get; set; }
+        public string Notes { get; set; }
+        public int ReportsTo { get; set; }
+
     }
-     
+
 
 }
